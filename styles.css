@@ -1,0 +1,79 @@
+body {
+  font-family: "Source Sans Pro", "sans-serif";
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media only screen and(max-width: 400px) {
+  p {
+    top: 200px;
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.box:hover {
+  -webkit-animation-duration: calc(1s * 0.75);
+  animation-duration: 0.75s;
+  -webkit-animation-duration: calc(var(--animate-duration) * 0.75);
+  animation-duration: calc(var(--animate-duration) * 0.75);
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+.box > img {
+  display: block;
+  width: 100%;
+}
+.box {
+  position: relative;
+}
+p {
+  color: white;
+  position: absolute;
+  z-index: 100;
+  top: 205px;
+  left: 10px;
+  font-size: 20px;
+  margin: 0;
+}
+footer {
+  display: flex;
+  align-items: center;
+
+  background-color: #222222;
+  color: white;
+  height: 40px;
+}
+.footer-main {
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+.footer-sub {
+  font-weight: 500;
+  margin-left: auto;
+}
+.svg {
+  width: 20px;
+  padding-right: 18px;
+  padding-left: 3px;
+}
