@@ -10,32 +10,6 @@ body {
   }
 }
 
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-.box:hover {
-  -webkit-animation-duration: calc(1s * 0.75);
-  animation-duration: 0.75s;
-  -webkit-animation-duration: calc(var(--animate-duration) * 0.75);
-  animation-duration: calc(var(--animate-duration) * 0.75);
-  -webkit-animation-name: pulse;
-  animation-name: pulse;
-}
-
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -59,7 +33,6 @@ p {
 footer {
   display: flex;
   align-items: center;
-
   background-color: #222222;
   color: white;
   height: 40px;
